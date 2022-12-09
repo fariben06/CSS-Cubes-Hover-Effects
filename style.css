@@ -19,18 +19,29 @@ body
     transform: skewY(-20deg);
     animation: animate 5s linear infinite;
 }
+@keyframes animate
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
 
 .container .cube
 {
     position: relative;
     z-index: 2;
 }
-.container .cube.cube:nth-child(2)
+.container .cube:nth-child(2)
 {
     z-index: 1;
     translate: -60px -60px;
 }
-.container .cube.cube:nth-child(3)
+.container .cube:nth-child(3)
 {
     z-index: 3;
     translate: 60px 60px;
@@ -87,7 +98,7 @@ body
     height: 40px;
     background: #f2f2f2;
     transform-origin: bottom;
-    transform: skewY(45deg);
+    transform: skewX(45deg);
     transition: 1.5s;
 }
 .container .cube div span:hover::after
